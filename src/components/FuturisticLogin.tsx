@@ -9,8 +9,8 @@ import api from '../lib/api';
 
 const FuturisticLogin = () => {
   const [formData, setFormData] = useState({
-    email: 'admin@chathub.com',
-    password: 'admin123'
+    email: '',
+    password: ''
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -44,7 +44,7 @@ const FuturisticLogin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4 relative overflow-hidden">
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-0 m-0 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -inset-6 opacity-30">
@@ -82,9 +82,9 @@ const FuturisticLogin = () => {
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative w-full max-w-md"
+        className="relative w-full max-w-md sm:max-w-sm xs:max-w-xs px-2 sm:px-4"
       >
-        <div className="backdrop-blur-xl bg-white/10 rounded-3xl shadow-2xl border border-white/20 p-8 relative overflow-hidden">
+        <div className="backdrop-blur-xl bg-white/10 rounded-3xl shadow-2xl border border-white/20 p-6 sm:p-8 relative overflow-hidden">
           {/* Glow effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl blur-xl"></div>
           
@@ -203,7 +203,7 @@ const FuturisticLogin = () => {
               transition={{ delay: 0.6 }}
               className="mt-8 pt-6 border-t border-white/20"
             >
-              <div className="grid grid-cols-2 gap-4 text-center">
+              <div className="grid grid-cols-2 gap-4 text-center sm:grid-cols-2 grid-cols-1">
                 <div className="text-gray-300">
                   <FiUser className="mx-auto text-2xl mb-2 text-purple-400" />
                   <p className="text-sm">User Management</p>

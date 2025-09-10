@@ -42,7 +42,7 @@ const FuturisticLayout: React.FC<Props> = ({ children }) => {
 
   // If we're on the login route, render only children (login page) without layout chrome
   if (pathname === '/admin/login') {
-    return <main className="p-6">{children}</main>;
+    return <main className="m-0 p-0">{children}</main>;
   }
 
   const navigation = [
